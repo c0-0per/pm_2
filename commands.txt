@@ -1,0 +1,46 @@
+// Get data from html in website
+POST http://127.0.0.1:5000/data_source
+{
+	"source_type": "website",
+	"url":
+	[
+		"https://www.example.com",
+		"p"
+	]
+}
+
+// Get data from rss feed
+POST http://127.0.0.1:5000/data_source
+{
+	"source_type": "rss",
+	"url":
+	[
+		"https://www.czechcrunch.cz/feed",
+		["funding", "fundraising", "Series A", "venture capital", "investment"]
+	]
+}
+
+// Get data from NewsAPI
+POST http://127.0.0.1:5000/data_source
+{
+	"source_type": "newsapi",
+	"api_endpoint":
+	[
+		"https://newsapi.org/v2/everything",
+		{
+			"q": "funding fundraising 'Series A' 'venture capital' investment",
+			"language": "en",
+			"pageSize": 5,
+			"apiKey": "2c712beed2a24fea95394aa9a3b56655"
+		}
+	]
+}
+
+// Select source by index
+POST http://127.0.0.1:5000/scrape
+{
+	"source_index": 0
+}
+
+// Get saved data sources
+GET http://127.0.0.1:5000/data_sources
