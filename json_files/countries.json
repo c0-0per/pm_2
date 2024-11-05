@@ -1,0 +1,29 @@
+[
+  {
+    "country": "Czech Republic",
+    "primary_language": "Czech",
+    "currency_used": "Czech Crown",
+    "startups": [],
+    "tracking_reports": [],
+    "data_sources": [],
+    "record_id": "recRy3V8VJMMCkaog"
+  },
+  {
+    "country": "Slovakia",
+    "primary_language": "Slovak",
+    "currency_used": "Euro",
+    "startups": [],
+    "tracking_reports": [],
+    "data_sources": [],
+    "record_id": "rec1f3V5ORXcXvQDl"
+  },
+  {
+    "country": "Poland",
+    "primary_language": "Polish",
+    "currency_used": "Polish Zloty",
+    "startups": [],
+    "tracking_reports": [],
+    "data_sources": [],
+    "record_id": "recrWE2FrrcQtZYex"
+  }
+]
