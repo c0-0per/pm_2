@@ -3,6 +3,8 @@ from model import DataSource
 import feedparser
 import requests
 
+from datetime import datetime
+
 
 class Scraper:
     def __init__(self, data_source: DataSource) -> None:
@@ -42,10 +44,27 @@ class Scraper:
         except Exception as e:
             return {"Error": str(e)}
 
-    def fetch_newsapi_data(self) -> dict:
+    def fetch_newsapi_data(self):
         try:
             response = requests.get(self.data_source.api_endpoint[0], self.data_source.api_endpoint[1])
             response.raise_for_status()
-            return response.json()
+            articles = response.json().get("articles", [])
+            formatted_articles = []
+
+            for article in articles:
+                article_data = {
+                    "Source Name": article.get("source", {}).get("name"),
+                    "Source URL": article.get("url"),
+                    "Data Type": ["Startups"],
+                    "Collection Frequency": "Daily",
+                    "Last Updated": datetime.now().strftime("%Y-%m-%d"),
+                    "Associated Countries": [],
+                    "Related Tracking Reports": [],
+                    "Startups": []
+                }
+
+                formatted_articles.append(article_data)
+
+            return formatted_articles
         except Exception as e:
             return {"Error": str(e)}

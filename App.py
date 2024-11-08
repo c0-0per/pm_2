@@ -4,6 +4,7 @@ import requests
 
 app = Flask(__name__)
 data_sources = []
+articles = []
 
 # Airtable setup
 AIRTABLE_API_KEY = 'patwN5zs8PvYco1aq.5186adce2a05f585419a30f20ed42c0ba9b0bf10aba6d8b19b8e46221890500e'
@@ -46,6 +47,7 @@ def scrape_data() -> any:
 
     scraper = sc.Scraper(data_sources[source_index])
     scraped_data = scraper.scrape()
+    articles.extend(scraped_data)
     return jsonify(scraped_data)
 
 
@@ -62,8 +64,9 @@ def get_data_sources() -> requests.Response:
 
 @app.route("/save_data_source", methods=["POST"])
 def save_data_source():
-    data_source = request.json
-    airtable_response = add_data_source_to_airtable(data_source)
+    data = request.json
+    source_index = data.get("source_index")
+    airtable_response = add_data_source_to_airtable(articles[source_index])
     return jsonify(airtable_response), 201
 
 
