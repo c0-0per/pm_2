@@ -41,29 +41,41 @@ Startups(List): seznam startupů
 ## Jak spustit
 python3 App.py
 
+
 Spustí se aplikace pro scrapování dat, která vezme z NewsAPI články, vytvoří JSON soubor scraped_data.json a zapíše zdroj článku a URL článku do Airtable.
+
 
 python3 remove_all_data.py
 
+
 Odstraní se všechny řádky z Airtable.
+
 
 Další práce
 
+
 cd for_future
+
 
 python3 json_to_airtable.py
 
+
 Spustí se aplikace, která vloží do Airtable informace z JSON souborů ve složce json_files. V případě, že u některého JSON elementu je zaznamenáno, že už v Airtable existuje, tak se změní pouze informace (nevytváří se nový řádek). Data musí být validní. Pro kontrolu:
+
 
 cd validator
 
+
 python3 validate_json_files.py
+
 
 Pokud jsou data smazána, je třeba změnit v JSON souborech record_id, jinak se nepodaří vložit do Airtable.
 
 
 Získávání informací by se dalo dělat přes ChatGPT API. První verze je v chatgpt_api.py. Spouští se:
 
+
 python3 chatgpt_api.py article.txt > output.txt
+
 
 ChatGPT si přečte článek article.txt a vytvoří JSON soubory v output.txt. Dále propojené s aplikací projektu to není. Je třeba mít ChatGPT API klíč.
