@@ -1,0 +1,118 @@
+[
+  {
+    "source_name": "Czechcrunch",
+    "source_url": "https://www.czechcrunch.com/",
+    "data_type": [
+      "Startups"
+    ],
+    "collection_frequency": "Daily",
+    "last_updated": "2024-05-11",
+    "associated_countries": [
+      "Czech Republic"
+    ],
+    "related_tracking_reports": [
+      "Czechcrunch1"
+    ],
+    "startups": [
+      "Lera company"
+    ],
+    "record_id": "reczllnXSJC4txIGP"
+  },
+  {
+    "source_name": "czechstartups",
+    "source_url": "https://www.czechstartups.com/",
+    "data_type": [
+      "Startups"
+    ],
+    "collection_frequency": "Daily",
+    "last_updated": "2024-06-09",
+    "associated_countries": [
+      "Czech Republic"
+    ],
+    "related_tracking_reports": [
+      "czechstartups5"
+    ],
+    "startups": [
+      "Anna company"
+    ],
+    "record_id": "recYsite33qSaPxjZ"
+  },
+  {
+    "source_name": "Slovakstartups",
+    "source_url": "https://www.slovakstartups.com/",
+    "data_type": [
+      "Startups"
+    ],
+    "collection_frequency": "Weekly",
+    "last_updated": "2024-03-05",
+    "associated_countries": [
+      "Slovakia"
+    ],
+    "related_tracking_reports": [
+      "Slovakstartups3"
+    ],
+    "startups": [
+      "Slovak startup"
+    ],
+    "record_id": "rec7pEx2uR42mkdvZ"
+  },
+  {
+    "source_name": "slovakbusiness",
+    "source_url": "https://www.slovakbusiness.com/",
+    "data_type": [
+      "Startups",
+      "Other"
+    ],
+    "collection_frequency": "Weekly",
+    "last_updated": "2024-08-09",
+    "associated_countries": [
+      "Slovakia"
+    ],
+    "related_tracking_reports": [
+      "slovakbusiness2"
+    ],
+    "startups": [
+      "Slovak startup"
+    ],
+    "record_id": "rec0d8sPpCeL9pSD4"
+  },
+  {
+    "source_name": "polishstartups",
+    "source_url": "https://www.polishstartups.com/",
+    "data_type": [
+      "Startups"
+    ],
+    "collection_frequency": "Monthly",
+    "last_updated": "2024-09-10",
+    "associated_countries": [
+      "Poland"
+    ],
+    "related_tracking_reports": [
+      "Polishstartups5"
+    ],
+    "startups": [
+      "Some polish startup"
+    ],
+    "record_id": "recynXjyjPJlB1Ihk"
+  },
+  {
+    "source_name": "polishbusiness",
+    "source_url": "https://www.polishbusiness.com/",
+    "data_type": [
+      "Startups",
+      "Investors"
+    ],
+    "collection_frequency": "Daily",
+    "last_updated": "2024-11-01",
+    "associated_countries": [
+      "Poland"
+    ],
+    "related_tracking_reports": [
+      "polishbusiness8"
+    ],
+    "startups": [
+      "Some polish startup"
+    ],
+    "record_id": "recedimMOzez5kFDN"
+  }
+]

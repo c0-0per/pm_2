@@ -1,0 +1,33 @@
+[
+  {
+    "investor_name": "Vlad",
+    "investor_type": "Individual",
+    "investment_amount": "$5 milion",
+    "contact_information": "vlad@gmail.com",
+    "associated_startups": [
+      "Lera company",
+      "Some polish startup"
+    ],
+    "record_id": "recFKp5K8D8qM75QN"
+  },
+  {
+    "investor_name": "Petr",
+    "investor_type": "Individual",
+    "investment_amount": "$10 milion",
+    "contact_information": "petr@gmail.com",
+    "associated_startups": [
+      "Anna company"
+    ],
+    "record_id": "rechQDdFdKItnIKH0"
+  },
+  {
+    "investor_name": "Zhanna and Alina org.",
+    "investor_type": "Organization",
+    "investment_amount": "$20 milion",
+    "contact_information": "zhannaalinaorg@gmail.com",
+    "associated_startups": [
+      "Slovak startup"
+    ],
+    "record_id": "recHpigW9NbtnDcM5"
+  }
+]

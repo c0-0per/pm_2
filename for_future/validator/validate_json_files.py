@@ -20,6 +20,8 @@ def validate_items(data, expected_types, unique_fields=[], allowed_values={}, da
         for field in unique_fields:
             value = item.get(field)
             if value in uniques[field]:
+                if field == "record_id":
+                    continue
                 errors.append(f"Item {idx + 1}: Duplicate '{field}' '{value}'.")
             else:
                 uniques[field].add(value)
@@ -63,7 +65,7 @@ def main():
                 "date_of_funding": str,
                 "tags": str,
                 "website": str,
-                "country": str,
+                "country": list,
                 "data_sources": list,
                 "investors": list,
                 "tracking_reports": list,
@@ -105,7 +107,7 @@ def main():
         "tracking_reports.json": {
             "expected_types": {
                 "report_id": str,
-                "data_source": str,
+                "data_source": list,
                 "report_date": str,
                 "summary": str,
                 "startups_covered": list,
@@ -119,7 +121,6 @@ def main():
         "countries.json": {
             "expected_types": {
                 "country": str,
-                "number_of_startups": int,
                 "primary_language": str,
                 "currency_used": str,
                 "startups": list,

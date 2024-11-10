@@ -1,0 +1,86 @@
+[
+  {
+    "report_id": "Czechcrunch1",
+    "data_source": "Czechcrunch",
+    "report_date": "2024-10-12",
+    "summary": "Article about new AI app",
+    "startups_covered": [
+      "Lera company"
+    ],
+    "countries": [
+      "Czech Republic"
+    ],
+    "generated_by": "",
+    "record_id": "recncIM5JT9JBfAoO"
+  },
+  {
+    "report_id": "czechstartups5",
+    "data_source": "czechstartups",
+    "report_date": "2024-10-11",
+    "summary": "Article that talks about new startups in Czech republic",
+    "startups_covered": [
+      "Anna company"
+    ],
+    "countries": [
+      "Czech Republic"
+    ],
+    "generated_by": "",
+    "record_id": "rechels5AntAx7KFr"
+  },
+  {
+    "report_id": "Slovakstartups3",
+    "data_source": "Slovakstartups",
+    "report_date": "2024-10-10",
+    "summary": "This article talk about what innovation can we expect in 2025 by promising startups",
+    "startups_covered": [
+      "Slovak startup"
+    ],
+    "countries": [
+      "Slovakia"
+    ],
+    "generated_by": "",
+    "record_id": "rec3riX3HIUtuE8EC"
+  },
+  {
+    "report_id": "slovakbusiness2",
+    "data_source": "slovakbusiness",
+    "report_date": "2024-10-09",
+    "summary": "New emerging startups from planet-oriented technologt",
+    "startups_covered": [
+      "Slovak startup"
+    ],
+    "countries": [
+      "Slovakia"
+    ],
+    "generated_by": "",
+    "record_id": "recBJYaol5LqQ9e5T"
+  },
+  {
+    "report_id": "Polishstartups5",
+    "data_source": "polishstartups",
+    "report_date": "2024-10-08",
+    "summary": "What are the most promising polish startups in 2024",
+    "startups_covered": [
+      "Some polish startup"
+    ],
+    "countries": [
+      "Poland"
+    ],
+    "generated_by": "",
+    "record_id": "recLtMpB7LeQhdwNG"
+  },
+  {
+    "report_id": "polishbusiness8",
+    "data_source": "polishbusiness",
+    "report_date": "2024-10-12",
+    "summary": "Startups in polandd - how well do they do",
+    "startups_covered": [
+      "Some polish startup"
+    ],
+    "countries": [
+      "Poland"
+    ],
+    "generated_by": "",
+    "record_id": "recjdnfPVUAhAcSrq"
+  }
+]
