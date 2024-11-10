@@ -1,44 +1,68 @@
 ### Skript pro integraci kódu na skrapování informací s Airtable
+
 Tento projekt slouží k přidávání a úpravy dat v Airtable pomocí API. Je třeba mít soubor scraped_data.json, podle struktury uvedené níže.
 
 ## Globální proměnné
+
 AIRTABLE_API_KEY: API klíč pro přístup k Airtable
+
 AIRTABLE_BASE_ID: Identifikátor Airtable databáze, kde budou data ukládána
+
 TABLE_NAME: Název tabulky v Airtable, do které budou data přidávána
 
 ## Funkce
+
 # add_row_to_airtable(row, table_name)
+
 Přidá jeden řádek do zadané tabulky v Airtable
 
 Parametry:
 
 row: Slovník obsahující data, která mají být přidána do tabulky
+
 table_name: Název tabulky, kam bude řádek přidán
+
 Návratová hodnota: Vrací JSON odpověď z API požadavku s informacemi o přidaném záznamu nebo případné chybě
 
+
 # add_scraped_data_to_airtable(scraped_data, table_name)
+
 Iteruje přes zadaná data a přidává každý záznam do zadané tabulky v Airtable
 
 Parametry:
+
 scraped_data: Seznam slovníků obsahujících jednotlivé záznamy (řádky) s poli jako „Associated Countries“, „Collection Frequency“ atd.
+
 table_name: Název tabulky, do které budou data přidána
 
+
 # add_data_to_airtable()
+
 Načítá data ze souboru scraped_data.json a předává je funkci add_scraped_data_to_airtable k přidání do Airtable
 
+
 ## Struktura scraped_data.json
+
 Soubor scraped_data.json by měl obsahovat seznam objektů s následujícími klíči:
 
 Associated Countries(List): seznam zemí, které souvisejí s obsahem zdroje
+
 Collection Frequency(String): frekvence sběru dat ze zdroje
+
 Data Type(List): typ dat
+
 Last Updated(String): datum poslední aktualizace v airtable
+
 Related Tracking Reports(list): související zprávy o sledování
+
 Source Name(String): název zdroje
+
 Source URL(String): URL zdroje
+
 Startups(List): seznam startupů
 
 ## Jak spustit
+
 python3 App.py
 
 
