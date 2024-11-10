@@ -14,6 +14,7 @@ spustí se aplikace která vloží do airtable informace z json filu ve složce 
 pro kontrolu:
 
 cd validator
+
 python3 validate_json_files.py
 
 pokud jsou data smazána, je třeba změnit v json files record_id, jinak nepůjdou vložit do airtable
