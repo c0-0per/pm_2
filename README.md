@@ -65,7 +65,13 @@ Startups(List): seznam startupů
 
 python3 App.py
 
+Počáteční stav aplikace:
+
 ![Počáteční stav aplikace](Airtable_start.png)
+
+Stav aplikace po běhu kodu:
+
+![Stav aplikace po běhu kodu](Airtable_finish.png)
 
 Spustí se aplikace pro scrapování dat, která vezme z NewsAPI články, vytvoří JSON soubor scraped_data.json a zapíše zdroj článku a URL článku do Airtable.
 
