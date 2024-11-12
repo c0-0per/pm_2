@@ -101,12 +101,3 @@ python3 validate_json_files.py
 
 
 Pokud jsou data smazána, je třeba změnit v JSON souborech record_id, jinak se nepodaří vložit do Airtable.
-
-
-Získávání informací by se dalo dělat přes ChatGPT API. První verze je v chatgpt_api.py. Spouští se:
-
-
-python3 chatgpt_api.py article.txt > output.txt
-
-
-ChatGPT si přečte článek article.txt a vytvoří JSON soubory v output.txt. Dále propojené s aplikací projektu to není. Je třeba mít ChatGPT API klíč.
