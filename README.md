@@ -25,6 +25,7 @@ table_name: Název tabulky, kam bude řádek přidán
 Návratová hodnota: Vrací JSON odpověď z API požadavku s informacemi o přidaném záznamu nebo případné chybě
 
 
+
 # add_scraped_data_to_airtable(scraped_data, table_name)
 
 Iteruje přes zadaná data a přidává každý záznam do zadané tabulky v Airtable
