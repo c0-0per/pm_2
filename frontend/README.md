@@ -79,7 +79,7 @@ Stav aplikace po běhu kodu:
 Spustí se aplikace pro scrapování dat, která vezme z NewsAPI články, vytvoří JSON soubor scraped_data.json a zapíše zdroj článku a URL článku do Airtable.
 
 
-python3 remove_all_data.py
+**python3 remove_all_data.py**
 
 
 Odstraní se všechny řádky z Airtable.
@@ -89,7 +89,7 @@ Pokud jsou data smazána, je třeba změnit v JSON souborech record_id, jinak se
 
 Další práce:
 
-cd for_future
+cd for_future...šablony json souborů pro vkládání do Airtable
 
 cd validator
 
