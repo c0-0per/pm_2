@@ -87,10 +87,12 @@ Odstraní se všechny řádky z Airtable.
 
 Další práce:
 
-cd for_future...šablony json souborů pro vkládání do Airtable
+cd for_future
+
+Složka "for_future" imituje "ideální" stav aplikace. Obsahuje šablony JSON souborů ("json_templates"), podle kterých jsou vytvořeny příklady vstupních dat ("json_files"). Po spuštění příkazu **python3 json_to_airtable.py** se tato data vloží do Airtable. Tento příkaz také spustí převod názvů jednotlivých entit na record_id, kterým budou reprezentovány v Airtable. Záznam o přiřazení record_id konkrétní entitě se uloží do slovníku ve složce "json_utils" pro další práci s entitami.
 
 cd validator
 
 **python3 validate_json_files.py**
 
-Pokud jsou data smazána, je třeba změnit v JSON souborech record_id, jinak se nepodaří vložit do Airtable.
+Zkontroluje, jestli JSON soubory jsou ve spravnem stavu. Pokud jsou data smazána, je třeba změnit v JSON souborech record_id (**python3 remove_record_ids.py**), jinak se je nepodaří vložit do Airtable.
