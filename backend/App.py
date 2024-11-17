@@ -4,7 +4,16 @@ import time
 import threading  # Imported for running Flask and automation concurrently
 from flask import Flask, request, jsonify 
 from model import Scraper as sc, DataSource as ds
-from add_to_airtable import add_data_to_airtable
+#from pm2.frontend.add_to_airtable import add_data_to_airtable
+import sys
+import os
+
+other_folder_path = os.path.abspath('../frontend')
+
+if other_folder_path not in sys.path:
+    sys.path.append(other_folder_path)
+
+import add_to_airtable
 
 app = Flask(__name__)
 data_sources = []
@@ -155,10 +164,10 @@ def automate_commands():
     try:
         response = requests.post(scrape_command["url"], json=scrape_command["json"])
         scraped_data = response.json()
-        with open("scraped_data.json", "w") as f: 
+        with open("../output/scraped_data.json", "w") as f: 
             json.dump(scraped_data, f, indent=4)
     except requests.exceptions.RequestException as e:
-        with open("scraped_data.json", "w") as f:
+        with open("../output/scraped_data.json", "w") as f:
             json.dump({"Error": str(e)}, f, indent=4)
 
 
@@ -168,4 +177,4 @@ if __name__ == "__main__":
     flask_thread.start()  # first start the flask thread
     
     automate_commands()  # then the commands thread
-    add_data_to_airtable()
+    add_to_airtable.add_data_to_airtable()

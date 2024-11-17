@@ -38,10 +38,10 @@ def add_scraped_data_to_airtable(scraped_data, table_name):
 
 def add_data_to_airtable():
     try:
-        with open('scraped_data.json', 'r', encoding='utf-8') as f:
+        with open('../output/scraped_data.json', 'r', encoding='utf-8') as f:
             scraped_data = json.load(f)
     except FileNotFoundError:
-        print("scraped_data.json file not found.")
+        print("../output/scraped_data.json file not found.")
         return
     except json.JSONDecodeError as e:
         print(f"Error decoding JSON: {e}")
