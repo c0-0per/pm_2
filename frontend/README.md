@@ -84,8 +84,6 @@ Spustí se aplikace pro scrapování dat, která vezme z NewsAPI články, vytvo
 
 Odstraní se všechny řádky z Airtable.
 
-Pokud jsou data smazána, je třeba změnit v JSON souborech record_id, jinak se nepodaří vložit do Airtable.
-
 
 Další práce:
 
@@ -93,4 +91,6 @@ cd for_future...šablony json souborů pro vkládání do Airtable
 
 cd validator
 
-python3 validate_json_files.py
+**python3 validate_json_files.py**
+
+Pokud jsou data smazána, je třeba změnit v JSON souborech record_id, jinak se nepodaří vložit do Airtable.
