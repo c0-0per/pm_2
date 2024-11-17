@@ -64,7 +64,9 @@ Startups(List): seznam startupů
 
 ## Jak spustit
 
-python3 App.py
+**python3 json_to_airtable.py**
+
+Spustí se aplikace, která vloží do Airtable informace z JSON souborů ve složce json_files. V případě, že u některého JSON elementu je zaznamenáno, že už v Airtable existuje, tak se změní pouze informace (nevytváří se nový řádek). Data musí být validní. Pro kontrolu:
 
 Počáteční stav aplikace:
 
@@ -82,23 +84,13 @@ python3 remove_all_data.py
 
 Odstraní se všechny řádky z Airtable.
 
+Pokud jsou data smazána, je třeba změnit v JSON souborech record_id, jinak se nepodaří vložit do Airtable.
 
-Další práce
 
+Další práce:
 
 cd for_future
 
-
-python3 json_to_airtable.py
-
-
-Spustí se aplikace, která vloží do Airtable informace z JSON souborů ve složce json_files. V případě, že u některého JSON elementu je zaznamenáno, že už v Airtable existuje, tak se změní pouze informace (nevytváří se nový řádek). Data musí být validní. Pro kontrolu:
-
-
 cd validator
 
-
 python3 validate_json_files.py
-
-
-Pokud jsou data smazána, je třeba změnit v JSON souborech record_id, jinak se nepodaří vložit do Airtable.
