@@ -1,4 +1,6 @@
-Flask
+Flask==2.3.2
+pyairtable==1.1.0
+gunicorn==21.0.0
 requests
 feedparser
 beautifulsoup4

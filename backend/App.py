@@ -221,6 +221,11 @@ def get_crunchbase_funding_rounds():
     return jsonify(funding_rounds), 200
 
 
+@app.route('/')
+def home():
+    return "Hello, Render and Airtable!"
+
+
 #new code
 def run_flask():
     app.run(debug=True, use_reloader=False) 
@@ -302,9 +307,12 @@ def automate_commands():
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
     flask_thread = threading.Thread(target=run_flask)  # create thread to run Flask
     flask_thread.daemon = True  # so that the thread exits when the main program does
     flask_thread.start()  # first start the flask thread
     
-    automate_commands()  # then the commands thread
-    add_to_airtable.add_data_to_airtable()
+    # automate_commands()  # then the commands thread
+    # add_to_airtable.add_data_to_airtable()
