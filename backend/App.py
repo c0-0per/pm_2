@@ -3,7 +3,7 @@ import json
 import time
 import threading  # Imported for running Flask and automation concurrently
 from flask import Flask, request, jsonify 
-from model import Scraper as sc, DataSource as ds
+from model import Scraper as sc, DataSource as ds, DataProcessor as dp
 #from pm2.frontend.add_to_airtable import add_data_to_airtable
 import sys
 import os
@@ -13,7 +13,7 @@ other_folder_path = os.path.abspath('../frontend')
 if other_folder_path not in sys.path:
     sys.path.append(other_folder_path)
 
-import add_to_airtable
+from frontend import add_to_airtable
 
 app = Flask(__name__)
 data_sources = []
@@ -25,6 +25,10 @@ AIRTABLE_BASE_ID = 'appuToHM0Lp9zrj9C'
 TABLE_NAME = 'Data Sources'
 
 ###kod Petra###
+
+# Crunchbase setup
+CRUNCHBASE_API_KEY = ""
+CRUNCHBASE_BASE_URL = "https://api.crunchbase.com/v3.1"
 
 def add_data_source_to_airtable(data_source):
     url = f"https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/{TABLE_NAME}"
@@ -41,6 +45,21 @@ def get_data_sources_from_airtable():
     headers = {"Authorization": f"Bearer {AIRTABLE_API_KEY}"}
     response = requests.get(url, headers=headers)
     return response.json()
+
+
+def fetch_from_crunchbase(endpoint, params):
+    url = f"{CRUNCHBASE_BASE_URL}/{endpoint}"
+    headers = {
+        "User-Agent": "",
+        "Authorization": f"Bearer {CRUNCHBASE_API_KEY}"
+    }
+    params["user_key"] = CRUNCHBASE_API_KEY
+    response = requests.get(url, headers=headers, params=params)
+
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return {"Error": "Unable to fetch data from Crunchbase!"}
 
 
 @app.route("/add_data_source", methods=["POST"])
@@ -89,6 +108,117 @@ def load_data_sources():
     airtable_data = get_data_sources_from_airtable()
     sources = [record for record in airtable_data.get("records", [])]
     return jsonify(sources)
+
+
+@app.route('/process_data', methods=['POST'])
+def process_data():
+    data = request.json
+    scraped_data = data.get("scraped_data")
+    countries = data.get("countries")
+    impact = data.get("impact")
+
+    if not scraped_data:
+        return jsonify({"Error": "No scraped data provided!"}), 400
+
+    processor = dp.DataProcessor(scraped_data)
+    startups = processor.detect_startups()
+
+    if countries:
+        startups = processor.apply_geo_filter(startups, countries)
+
+    if impact:
+        startups = processor.apply_impact_filter(startups, impact)
+
+    return jsonify([startup.to_dict() for startup in startups])
+
+
+@app.route('/startups', methods=['GET'])
+def get_crunchbase_startups():
+    query = request.args.get("query", "")
+    page = request.args.get("page", 1)
+    params = {
+        "query": query,
+        "page": page
+    }
+    data = fetch_from_crunchbase("organizations", params)
+
+    if "error" in data:
+        return jsonify(data), 400
+
+    startups = []
+
+    for org in data.get("data"):
+        org_properties = org.get("properties", {})
+        startups.append({
+            "LastUpdated": org_properties.get("updated_at"),
+            "FoundedDate": org_properties.get("founded_on"),
+            "Industry": org_properties.get("categories", []),
+            "Founders": "Unknown",
+            "FundingRound": "Unknown",
+            "AmountRaised": org_properties.get("total_funding_usd", "Unknown"),
+            "Tags": org_properties.get("short_description", "").split(),
+            "Website": org_properties.get("homepage_url"),
+            "Country": org_properties.get("location_country_code"),
+            "Investors": "Unknown"
+        })
+
+    return jsonify(startups), 200
+
+
+@app.route('/investors', methods=['GET'])
+def get_crunchbase_investors():
+    query = request.args.get("query", "")
+    page = request.args.get("page", 1)
+    params = {
+        "query": query,
+        "page": page
+    }
+    data = fetch_from_crunchbase("people", params)
+
+    if "error" in data:
+        return jsonify(data), 400
+
+    investors = []
+
+    for person in data.get("data"):
+        person_properties = person.get("properties", {})
+        investors.append({
+            "investor_name": person_properties.get("first_name", "") + " " + person_properties.get("last_name", ""),
+            "investor_type": "Unknown",
+            "investment_amount": "Unknown",
+            "contact_information": person_properties.get("email_address", "Unknown"),
+            "associated_startups": [],
+            "record_id": person.get("uuid")
+        })
+
+    return jsonify(investors), 200
+
+
+@app.route('/funding_rounds', methods=['GET'])
+def get_crunchbase_funding_rounds():
+    query = request.args.get("query", "")
+    page = request.args.get("page", 1)
+    params = {
+        "query": query,
+        "page": page
+    }
+    data = fetch_from_crunchbase("funding_rounds", params)
+
+    if "error" in data:
+        return jsonify(data), 400
+
+    funding_rounds = []
+
+    for round_data in data.get("data"):
+        round_properties = round_data.get("properties", {})
+        funding_rounds.append({
+            "round_type": round_properties.get("funding_type"),
+            "amount_raised": round_properties.get("money_raised_usd", "Unknown"),
+            "date": round_properties.get("announced_on"),
+            "investors": round_properties.get("investor_names", "Unknown")
+        })
+
+    return jsonify(funding_rounds), 200
 
 
 #new code

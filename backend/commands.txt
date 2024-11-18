@@ -53,3 +53,13 @@ POST http://127.0.0.1:5000/save_data_source
 
 // Get data from Airtable
 GET http://127.0.0.1:5000/load_data_sources
+
+// Process data
+POST http://127.0.0.1:5000/process_data
+{
+  "scraped_data": {
+    "content": ["Startup ABC announced a Series A funding of $10M..."]
+  },
+  "countries": ["Czech Republic", "Poland"],
+  "impact": ["Sustainability", "AI"]
+}
