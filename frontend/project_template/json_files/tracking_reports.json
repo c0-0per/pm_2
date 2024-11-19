@@ -1,0 +1,96 @@
+[
+  {
+    "report_id": "CzechCrunch Report 2024",
+    "data_source": [
+      "CzechCrunch"
+    ],
+    "report_date": "2024-10-11",
+    "summary": "Avast Software's new cybersecurity solution gains global attention.",
+    "startups_covered": [
+      "Avast Software"
+    ],
+    "countries": [
+      "Czech Republic"
+    ],
+    "generated_by": "Admin",
+    "record_id": "recrEnPrNjNJxYaSv"
+  },
+  {
+    "report_id": "StartupJobs Report",
+    "data_source": [
+      "StartupJobs.cz"
+    ],
+    "report_date": "2024-10-10",
+    "summary": "Kiwi.com expands its services to include hotel bookings.",
+    "startups_covered": [
+      "Kiwi.com"
+    ],
+    "countries": [
+      "Czech Republic"
+    ],
+    "generated_by": "User",
+    "record_id": "rec6uvPvc0L1hmxKY"
+  },
+  {
+    "report_id": "SlovakStartups Annual Report",
+    "data_source": [
+      "SlovakStartup.com"
+    ],
+    "report_date": "2024-10-09",
+    "summary": "Sygic launches new fleet management software.",
+    "startups_covered": [
+      "Sygic"
+    ],
+    "countries": [
+      "Slovakia"
+    ],
+    "generated_by": "Admin",
+    "record_id": "recqllCOfd4Oxb0Dj"
+  },
+  {
+    "report_id": "Techbox.sk Analysis",
+    "data_source": [
+      "Techbox.sk"
+    ],
+    "report_date": "2024-10-08",
+    "summary": "Photoneo secures significant funding for 3D scanning technology.",
+    "startups_covered": ["Avast Software"],
+    "countries": [
+      "Slovakia"
+    ],
+    "generated_by": "User",
+    "record_id": "receJlJgnxoOa4FEc"
+  },
+  {
+    "report_id": "Polish Startups Report 2024",
+    "data_source": [
+      "PolishStartups.com"
+    ],
+    "report_date": "2024-10-07",
+    "summary": "Booksy reaches 10 million users worldwide.",
+    "startups_covered": [
+      "Booksy"
+    ],
+    "countries": [
+      "Poland"
+    ],
+    "generated_by": "User",
+    "record_id": "recQLFAdlLPqwYF7L"
+  },
+  {
+    "report_id": "Sifted.eu Poland Tech Report",
+    "data_source": [
+      "Sifted.eu"
+    ],
+    "report_date": "2024-10-06",
+    "summary": "Brainly's education platform experiences rapid growth.",
+    "startups_covered": [
+      "Booksy"
+    ],
+    "countries": [
+      "Poland"
+    ],
+    "generated_by": "Admin",
+    "record_id": "rec04EttVRU9Dgcu8"
+  }
+]

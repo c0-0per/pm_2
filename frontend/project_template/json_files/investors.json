@@ -1,0 +1,34 @@
+[
+  {
+    "investor_name": "Credo Ventures",
+    "investor_type": "Individual",
+    "investment_amount": "$5 million",
+    "contact_information": [
+      "ask@credo.com"
+    ],
+    "associated_startups": [
+      "Kiwi.com"
+    ],
+    "record_id": "recnkFX4aLhntoA0y"
+  },
+  {
+    "investor_name": "Inovo Venture Partners",
+    "investor_type": "Organization",
+    "investment_amount": "$10 million",
+    "contact_information": "contact@inovo.vc",
+    "associated_startups": [
+      "Booksy"
+    ],
+    "record_id": "rec7IrCODvQH6iiSO"
+  },
+  {
+    "investor_name": "Neulogy Ventures",
+    "investor_type": "Organization",
+    "investment_amount": "$20 million",
+    "contact_information": "info@neulogy.vc",
+    "associated_startups": [
+      "Sygic"
+    ],
+    "record_id": "reclTS7mX0KuikjYk"
+  }
+]

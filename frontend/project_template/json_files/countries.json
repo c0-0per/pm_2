@@ -1,0 +1,54 @@
+[
+  {
+    "country": "Czech Republic",
+    "primary_language": "Czech",
+    "currency_used": "Czech Koruna",
+    "startups": [
+      "Avast Software",
+      "Kiwi.com"
+    ],
+    "tracking_reports": [
+      "CzechCrunch Report 2024",
+      "StartupJobs Report"
+    ],
+    "data_sources": [
+      "CzechCrunch",
+      "StartupJobs.cz"
+    ],
+    "record_id": "recR3waBurBpDooq4"
+  },
+  {
+    "country": "Slovakia",
+    "primary_language": "Slovak",
+    "currency_used": "Euro",
+    "startups": [
+      "Sygic"
+    ],
+    "tracking_reports": [
+      "SlovakStartups Annual Report",
+      "Techbox.sk Analysis"
+    ],
+    "data_sources": [
+      "SlovakStartup.com",
+      "Techbox.sk"
+    ],
+    "record_id": "recJKGCFWBj7YhRJ0"
+  },
+  {
+    "country": "Poland",
+    "primary_language": "Polish",
+    "currency_used": "Polish Zloty",
+    "startups": [
+      "Booksy"
+    ],
+    "tracking_reports": [
+      "Polish Startups Report 2024",
+      "Sifted.eu Poland Tech Report"
+    ],
+    "data_sources": [
+      "PolishStartups.com",
+      "Sifted.eu"
+    ],
+    "record_id": "recgQilueQ2xMPk5h"
+  }
+]

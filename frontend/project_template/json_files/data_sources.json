@@ -1,0 +1,118 @@
+[
+  {
+    "source_name": "CzechCrunch",
+    "source_url": "https://www.czechcrunch.cz/",
+    "data_type": [
+      "Startups"
+    ],
+    "collection_frequency": "Daily",
+    "last_updated": "2024-10-11",
+    "associated_countries": [
+      "Czech Republic"
+    ],
+    "related_tracking_reports": [
+      "CzechCrunch Report 2024"
+    ],
+    "startups": [
+      "Avast Software"
+    ],
+    "record_id": "recHldM253geas6zB"
+  },
+  {
+    "source_name": "StartupJobs.cz",
+    "source_url": "https://www.startupjobs.cz/",
+    "data_type": [
+      "Startups"
+    ],
+    "collection_frequency": "Daily",
+    "last_updated": "2024-10-09",
+    "associated_countries": [
+      "Czech Republic"
+    ],
+    "related_tracking_reports": [
+      "StartupJobs Report"
+    ],
+    "startups": [
+      "Kiwi.com"
+    ],
+    "record_id": "reclRtMvvtmuF6W4J"
+  },
+  {
+    "source_name": "SlovakStartup.com",
+    "source_url": "https://www.slovakstartup.com/",
+    "data_type": [
+      "Startups"
+    ],
+    "collection_frequency": "Weekly",
+    "last_updated": "2024-10-08",
+    "associated_countries": [
+      "Slovakia"
+    ],
+    "related_tracking_reports": [
+      "SlovakStartups Annual Report"
+    ],
+    "startups": [
+      "Sygic"
+    ],
+    "record_id": "recta1SxiPk1u8wgc"
+  },
+  {
+    "source_name": "Techbox.sk",
+    "source_url": "https://www.techbox.sk/",
+    "data_type": [
+      "Startups",
+      "Investors"
+    ],
+    "collection_frequency": "Weekly",
+    "last_updated": "2024-10-07",
+    "associated_countries": [
+      "Slovakia"
+    ],
+    "related_tracking_reports": [
+      "Techbox.sk Analysis"
+    ],
+    "startups": [
+      "Sygic"
+    ],
+    "record_id": "recchcq2zfTN741j7"
+  },
+  {
+    "source_name": "PolishStartups.com",
+    "source_url": "https://www.polishstartups.com/",
+    "data_type": [
+      "Startups"
+    ],
+    "collection_frequency": "Monthly",
+    "last_updated": "2024-10-06",
+    "associated_countries": [
+      "Poland"
+    ],
+    "related_tracking_reports": [
+      "Polish Startups Report 2024"
+    ],
+    "startups": [
+      "Booksy"
+    ],
+    "record_id": "reck2g0vMCrMSZhY7"
+  },
+  {
+    "source_name": "Sifted.eu",
+    "source_url": "https://sifted.eu/",
+    "data_type": [
+      "Startups",
+      "Investors"
+    ],
+    "collection_frequency": "Daily",
+    "last_updated": "2024-10-05",
+    "associated_countries": [
+      "Poland"
+    ],
+    "related_tracking_reports": [
+      "Sifted.eu Poland Tech Report"
+    ],
+    "startups": [
+      "Booksy"
+    ],
+    "record_id": "reczibbh0K562oEIy"
+  }
+]

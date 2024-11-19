@@ -1,0 +1,108 @@
+[
+  {
+    "startup_name": "Avast Software",
+    "last_updated": "2024-10-11",
+    "founded_date": "1988-01-01",
+    "industry": [
+      "Cybersecurity"
+    ],
+    "founders": "Pavel Baudi\u0161, Eduard Ku\u010dera",
+    "amount_raised": "$200 million",
+    "date_of_funding": "2018-05-10",
+    "tags": "",
+    "website": "www.avast.com",
+    "country": [
+      "Czech Republic"
+    ],
+    "data_sources": [
+      "CzechCrunch"
+    ],
+    "investors": [
+      "Credo Ventures"
+    ],
+    "tracking_reports": [
+      "CzechCrunch Report 2024"
+    ],
+    "record_id": "reckkzufNEyfzX2v1"
+  },
+  {
+    "startup_name": "Kiwi.com",
+    "last_updated": "2024-10-10",
+    "founded_date": "2012-04-10",
+    "industry": [
+      "Travel Technology"
+    ],
+    "founders": "Oliver Dlouhý",
+    "amount_raised": "$160 million",
+    "date_of_funding": "2020-08-15",
+    "tags": "",
+    "website": "www.kiwi.com",
+    "country": [
+      "Czech Republic"
+    ],
+    "data_sources": [
+      "StartupJobs.cz"
+    ],
+    "investors": [
+      "Credo Ventures"
+    ],
+    "tracking_reports": [
+      "StartupJobs Report"
+    ],
+    "record_id": "recn4lY0NRzhSGBhZ"
+  },
+  {
+    "startup_name": "Sygic",
+    "last_updated": "2024-10-09",
+    "founded_date": "2004-11-01",
+    "industry": [
+      "Navigation Software"
+    ],
+    "founders": "Michal Štencl",
+    "amount_raised": "$15 million",
+    "date_of_funding": "2023-07-20",
+    "tags": "",
+    "website": "www.sygic.com",
+    "country": [
+      "Slovakia"
+    ],
+    "data_sources": [
+      "SlovakStartup.com",
+      "Techbox.sk"
+    ],
+    "investors": [
+      "Neulogy Ventures"
+    ],
+    "tracking_reports": [
+      "SlovakStartups Annual Report",
+      "Techbox.sk Analysis"
+    ],
+    "record_id": "rec0lOQHIHwK6vBwX"
+  },
+  {
+    "startup_name": "Booksy",
+    "last_updated": "2024-10-08",
+    "founded_date": "2015-06-15",
+    "industry": [
+      "Beauty and Wellness"
+    ],
+    "founders": "Stefan Batory",
+    "amount_raised": "$70 million",
+    "date_of_funding": "2021-01-27",
+    "tags": "",
+    "website": "www.booksy.com",
+    "country": [
+      "Poland"
+    ],
+    "data_sources": [
+      "PolishStartups.com"
+    ],
+    "investors": [
+      "Inovo Venture Partners"
+    ],
+    "tracking_reports": [
+      "Polish Startups Report 2024"
+    ],
+    "record_id": "rec4IGCEEjrpXZPhD"
+  }
+]
