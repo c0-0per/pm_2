@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from backend.model import DataSource
+from model import DataSource
 import feedparser
 import requests
 

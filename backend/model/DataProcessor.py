@@ -1,4 +1,4 @@
-from backend.model.Startup import Startup
+from model import Startup
 
 
 class DataProcessor:
