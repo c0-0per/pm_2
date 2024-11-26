@@ -4,17 +4,18 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# Copy the current directory contents into the container
 COPY . /app
 
-# Ensure the backend folder is included in PYTHONPATH
-ENV PYTHONPATH=/app
-
-# Install any needed dependencies specified in requirements.txt
+# Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r backend/requirements.txt
 
-# Make port 8080 available to the world outside this container
-EXPOSE 8080
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
 
-# Run App.py when the container launches
+# Define environment variables
+# Add the parent directory to PYTHONPATH
+ENV PYTHONPATH="${PYTHONPATH}:/app/backend:/app/frontend"
+
+# Run app.py when the container launches
 CMD ["python", "backend/App.py"]

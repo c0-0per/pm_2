@@ -7,6 +7,7 @@ from model import Scraper as sc, DataSource as ds, DataProcessor as dp
 #from pm2.frontend.add_to_airtable import add_data_to_airtable
 import sys
 import os
+from add_to_airtable import add_data_to_airtable
 
 other_folder_path = os.path.abspath('../frontend')
 
@@ -305,14 +306,22 @@ def automate_commands():
         with open("../output/scraped_data.json", "w") as f:
             json.dump({"Error": str(e)}, f, indent=4)
 
+def background_task():
+    while True:
+        print("Running Airtable update...")
+        add_data_to_airtable()
+        time.sleep(3600)  # Run every hour
+
 
 if __name__ == "__main__":
+    threading.Thread(target=background_task, daemon=True).start()
+
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
 
-    flask_thread = threading.Thread(target=run_flask)  # create thread to run Flask
-    flask_thread.daemon = True  # so that the thread exits when the main program does
-    flask_thread.start()  # first start the flask thread
+    # flask_thread = threading.Thread(target=run_flask)  # create thread to run Flask
+    # flask_thread.daemon = True  # so that the thread exits when the main program does
+    # flask_thread.start()  # first start the flask thread
     
     # automate_commands()  # then the commands thread
     # add_to_airtable.add_data_to_airtable()
